@@ -4,12 +4,10 @@ using namespace std;
 
 int main()
 {
-    unsigned long long int m, n, a, res, at, as;
-    cin >> m >> n >> a;
-    at = m * n;
-    as = a * a;
-    res = at / as;
-
+    unsigned long long m, n, a, res = 1;
+    cin >> n >> m >> a;
+    (n % a) != 0 ? res *= (n / a) + 1 : res *= n / a;
+    (m % a) != 0 ? res *= (m / a) + 1 : res *= m / a;
     cout << res;
     return 0;
 }
